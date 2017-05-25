@@ -8,6 +8,8 @@ import outlook
 def main():
     mail = outlook.Outlook()
     mail.login(config.username, config.passwd)
+    if hasattr(config, 'attach_dir') :
+        mail.setAttchDir(config.attach_dir)
     while True:
         try:
             mail.inbox()
