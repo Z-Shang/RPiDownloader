@@ -1,0 +1,19 @@
+# RPi Downloader
+Send an email and your Raspberry Pi will download the stuff you want
+
+## Usage
+First, create a file named `config.py` including:
+```
+username = "foo@bar.com"
+passwd = "put your password here"
+imap_server = "your email service's imap address" # For Outlook: "imap-mail.outlook.com"
+imap_port = "your email service's imap port" # For Outlook: "993"
+# Optional
+attach_dir = "attach dir" # This will be "./" by default
+```
+this is only tested with my own outlook email
+
+Then send an email to the email address that contains download link / torrent as attachment
+
+## Credit
+The email operation part is modified from Awangga's [outlook]('https://github.com/awangga/outlook')
